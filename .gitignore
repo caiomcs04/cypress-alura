@@ -4,3 +4,4 @@
 #Cypress
 cypress/videos
 /mochawesome-report
+cypress.env.json
