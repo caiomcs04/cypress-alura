@@ -5,7 +5,7 @@ describe("Login de usuarios alura pic", () => {
 
   //Por algum motivo nao funciona no chrome. provavelmente CORS
   it("Fazer login usuário válido", () => {
-    cy.login(Cypress.env('userName'), Cypress.env('password'));
+    cy.login(Cypress.env("userName"), Cypress.env("password"));
     cy.contains("a", "(Logout)").should("be.visible");
   });
 
