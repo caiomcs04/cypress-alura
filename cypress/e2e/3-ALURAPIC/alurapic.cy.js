@@ -1,7 +1,6 @@
 describe('Login e registro de usuarios alura pic',()=>{
     beforeEach(()=>{
-        
-        cy.visit('https://alura-fotos.herokuapp.com');
+       cy.visit('https://alura-fotos.herokuapp.com');
     })
 
     it('Verificar mensagem validação required', ()=>{
@@ -61,6 +60,18 @@ describe('Login e registro de usuarios alura pic',()=>{
         cy.get('input[formcontrolname="password"]').type('123456789012345678')
         cy.contains('button', 'Register').click();
         cy.contains('ap-vmessage', 'Maximun length is 18').should('be.visible');
+    })
+
+    it.only('Fazer login usuário válido',()=>{
+        cy.login('flavio','123');
+        cy.contains('a','(Logout)').should('be.visible');
+    })
+
+    it.only('Fazer login usuário inválido',()=>{
+        cy.login('flavio','1234');
+        cy.on('window:alert', (str)=>{
+            expect(str).to.equal('Invalid user name or password')
+        });
     })
 })
 

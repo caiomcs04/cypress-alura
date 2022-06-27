@@ -3,3 +3,4 @@
 
 #Cypress
 cypress/videos
+/mochawesome-report
