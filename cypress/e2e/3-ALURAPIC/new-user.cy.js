@@ -13,6 +13,7 @@ describe("Cadastro de usuarios alura pic", () => {
     cy.contains("ap-vmessage", "Full name is required!").should("be.visible");
     cy.contains("ap-vmessage", "User name is required!").should("be.visible");
     cy.contains("ap-vmessage", "Password is required!").should("be.visible");
+    
   });
 
   it("Verificar mensagem email invalid", () => {
