@@ -19,6 +19,6 @@ steps:
       from_secret: docker_username
     password:
       from_secret: docker_password
-    repo: rlachhman/myrepo
+    repo: caiomcs04/cypress-alura
     auto_tag: true
     auto_tag_suffix: drone-build
